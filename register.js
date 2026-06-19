@@ -23,7 +23,7 @@ form.addEventListener("submit", async (e) => {
         }
 
         const response = await fetch(
-            "http://localhost:8080/v1/register",
+            "https://protfolio-backend-45v7.onrender.com/register",
             {
                 method: "POST",
                 headers: {
