@@ -6,9 +6,7 @@ const container = document.getElementById("container");
 
 
 
-if (password !== confirmPassword) {
-    console.log("password is not mathing");
-}
+
 
 
 
@@ -16,9 +14,7 @@ form.addEventListener("submit", async (e) => {
     e.preventDefault();
     try {
         const userData = {
-
-
-            username: document.getElementById("username").value,
+            username: document.getElementById("name").value,
             email: document.getElementById("email").value,
             suggestion: document.getElementById("message").value
         }
