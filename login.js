@@ -15,7 +15,7 @@ form.addEventListener("submit", async (e) => {
         }
 
         const response = await fetch(
-            "https://protfolio-backend-45v7.onrender.com/login",
+            "https://protfolio-backend-45v7.onrender.com/v1/login",
             {
                 method: "POST",
                 headers: {
