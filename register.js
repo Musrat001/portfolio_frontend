@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
 
         const data = await response.json();
         if (!data.ok) {
-            successMessage.innerText = data.message;
+            alert(data.message);
             return;
         }
         if (data) {
