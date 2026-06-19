@@ -26,8 +26,11 @@ form.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
-        // const text = await response.text();
-        // console.log(text);
+        if(!response.ok){
+            alert(data.message);
+            return;
+        }
+        
         console.log(data);
         if (data) {
             loginCard.style.display = "none";
