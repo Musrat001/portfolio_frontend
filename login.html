@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-card" id="loginCard">
+
+        <h2>Welcome Back</h2>
+        <p>Login to continue your journey.</p>
+
+        <form id="login-card">
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter your email or username">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="extra-options">
+                <label>
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="register-link">
+            Don't have an account?
+            <a href="register.html">Register</a>
+        </div>
+
+    </div>
+
+    <div id="loginMessage">
+        <h3 id="successMessage"></h3>
+        
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

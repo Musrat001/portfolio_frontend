@@ -1,0 +1,88 @@
+:root {
+    --bg: #0D1117;
+    --card: #161B22;
+    --text: #ffffff;
+    --muted: #8B949E;
+    --accent: #A6FF4D;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+
+form {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+input,
+textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #0D1117;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid var(--accent);
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(166, 255, 77, 0.3);
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--muted);
+    text-decoration: none;
+}
