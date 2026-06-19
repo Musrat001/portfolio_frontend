@@ -7,7 +7,7 @@ const login = document.getElementById("login");
 
 
 if (password !== confirmPassword) {
-    console.log("password is not mathing");
+    console.log("password is not matching");
 }
 
 
@@ -34,11 +34,15 @@ form.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
+        if (!data.ok) {
+            successMessage.innerText = data.message;
+            return;
+        }
         if (data) {
             console.log(data);
             registerCard.style.display = "none";
             successMessage.innerText = data.message;
-            setTimeout(()=>{
+            setTimeout(() => {
                 window.location.href = "login.html";
             }, 2000);
 
