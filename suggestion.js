@@ -16,7 +16,7 @@ form.addEventListener("submit", async (e) => {
         const userData = {
             username: document.getElementById("name").value,
             email: document.getElementById("email").value,
-            suggestion: document.getElementById("message").value
+            suggestion: document.getElementById("suggestion").value
         }
         console.log(userData);
 
