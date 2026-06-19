@@ -37,7 +37,7 @@ form.addEventListener("submit", async (e) => {
         if (data) {
             console.log(data);
             registerCard.style.display = "none";
-            successMessage.innerText = "Registered successfully!..";
+            successMessage.innerText = data.message;
             setTimeout(()=>{
                 window.location.href = "login.html";
             }, 2000);

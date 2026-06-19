@@ -31,7 +31,7 @@ form.addEventListener("submit", async (e) => {
         console.log(data);
         if (data) {
             loginCard.style.display = "none";
-            successMessage.innerText = "You logged in SuccessFully!";
+            successMessage.innerText = data.message;
             setTimeout(() => {
                 window.location.href = "index.html";
             }, 2000);
