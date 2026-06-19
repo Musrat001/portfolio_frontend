@@ -18,6 +18,8 @@ form.addEventListener("submit", async (e) => {
             email: document.getElementById("email").value,
             suggestion: document.getElementById("message").value
         }
+        console.log(userData);
+        
 
         const response = await fetch(
             "https://protfolio-backend-45v7.onrender.com/v1/suggestion",
