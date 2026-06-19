@@ -86,3 +86,11 @@ button:hover {
     color: var(--muted);
     text-decoration: none;
 }
+
+#loginMessage {
+    color: #A6FF4D;
+}
+
+#successMessage {
+    color: #A6FF4D;
+}
