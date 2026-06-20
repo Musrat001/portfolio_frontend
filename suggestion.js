@@ -14,7 +14,7 @@ form.addEventListener("submit", async (e) => {
     e.preventDefault();
     try {
         const userData = {
-            username: document.getElementById("name").value,
+            name: document.getElementById("name").value,
             email: document.getElementById("email").value,
             suggestion: document.getElementById("suggestion").value
         }
