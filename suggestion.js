@@ -33,10 +33,14 @@ form.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
+        if(!response.ok){
+            alert(data.message);
+            return;
+        }
         if (data) {
             console.log(data);
             container.style.display = "none";
-            successMessage.innerText = "Suggestion sent successfully!..";
+            successMessage.innerText = data.message;
             setTimeout(() => {
                 window.location.href = "index.html";
             }, 2000);
