@@ -17,7 +17,8 @@ form.addEventListener("submit", async (e) => {
             fullName: document.getElementById("fullName").value,
             email: document.getElementById("email").value,
             username: document.getElementById("username").value,
-            password: document.getElementById("password").value
+            password: document.getElementById("password").value,
+            confirmPassword: document.getElementById("confirmPassword").value
         }
 
         const response = await fetch(
@@ -26,6 +27,7 @@ form.addEventListener("submit", async (e) => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
+                    
                 },
                 body: JSON.stringify(userData)
             }
