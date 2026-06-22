@@ -32,10 +32,11 @@ form.addEventListener("submit", async (e) => {
 
         if (!response.ok) {
             alert(data.message);
-            console.log(response.status);
 
-            if (response.status === 404) {
+
+            if (response.status == 404) {
                 console.log("Email is not registerd!");
+                console.log(response.status);
                 setTimeout(() => {
                     window.location.href = "register.html";
                 }, 2000);
