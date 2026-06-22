@@ -1,7 +1,7 @@
-const successMessage = document.getElementById("successMessage");
-const home = document.getElementById("home");
+// const successMessage = document.getElementById("successMessage");
+// const home = document.getElementById("home");
 const form = document.getElementById("login-card");
-const loginCard = document.getElementById("loginCard");
+// const loginCard = document.getElementById("loginCard");
 
 
 
@@ -33,11 +33,12 @@ form.addEventListener("submit", async (e) => {
         
         console.log(data);
         if (data) {
-            loginCard.style.display = "none";
-            successMessage.innerText = data.message;
+            // loginCard.style.display = "none";
+            // successMessage.innerText = data.message;
+            alert(data.message);
             setTimeout(() => {
                 window.location.href = "index.html";
-            }, 2000);
+            }, 1000);
         }
 
     } catch (error) {

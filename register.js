@@ -1,14 +1,12 @@
 const form = document.getElementById("registerForm");
-const successMessage = document.getElementById("successMessage");
-const registerCard = document.getElementById("register-card");
-const login = document.getElementById("login");
+// const successMessage = document.getElementById("successMessage");
+// const registerCard = document.getElementById("register-card");
+// const login = document.getElementById("login");
 
 
 
 
-if (password !== confirmPassword) {
-    console.log("password is not matching");
-}
+
 
 
 
@@ -40,11 +38,12 @@ form.addEventListener("submit", async (e) => {
         }
         if (data) {
             console.log(data);
-            registerCard.style.display = "none";
-            successMessage.innerText = data.message;
+            // registerCard.style.display = "none";
+            // successMessage.innerText = data.message;
+            alert(data.message);
             setTimeout(() => {
                 window.location.href = "login.html";
-            }, 2000);
+            }, 1000);
 
         }
 
