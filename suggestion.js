@@ -32,6 +32,8 @@ form.addEventListener("submit", async (e) => {
 
         if (!response.ok) {
             alert(data.message);
+            console.log(response.status);
+
             if (response.status === 404) {
                 console.log("Email is not registerd!");
                 setTimeout(() => {
