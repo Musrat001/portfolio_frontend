@@ -131,3 +131,11 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--muted);
+    text-decoration: none;
+}

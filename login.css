@@ -156,3 +156,11 @@ body {
 #successMessage {
     color: #A6FF4D;
 }
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--muted);
+    text-decoration: none;
+}
