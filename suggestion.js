@@ -27,16 +27,18 @@ form.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
-        if (response.status == 404) {
-            console.log("Email is not registerd!");
-            window.location.href = "register.html";
 
-
-        }
         console.log(response);
 
         if (!response.ok) {
             alert(data.message);
+            if (response.status === 404) {
+                console.log("Email is not registerd!");
+                setTimeout(() => {
+                    window.location.href = "register.html";
+                }, 2000);
+
+            }
             return;
         }
         if (data) {
