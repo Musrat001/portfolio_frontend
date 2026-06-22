@@ -4,12 +4,6 @@ const container = document.getElementById("container");
 // const loginMessage = document.getElementById("loginMessage");
 
 
-
-
-
-
-
-
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
     try {
@@ -33,7 +27,9 @@ form.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
-        if(!response.ok){
+        console.log(response);
+
+        if (!response.ok) {
             alert(data.message);
             return;
         }
