@@ -15,3 +15,12 @@
 //         sidebar.style.backgroundColor = "#dad7cd";
 //     }
 // })
+
+
+
+const menu = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
