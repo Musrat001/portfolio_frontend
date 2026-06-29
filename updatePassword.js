@@ -16,7 +16,7 @@ showPassword.addEventListener("change", () => {
 const updatePasswordForm = document.getElementById("updatePasswordForm");
 
 
-updatePasswordForm.addEventListener("submit", (e) => {
+updatePasswordForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     try {
 
