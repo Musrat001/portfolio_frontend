@@ -3,7 +3,7 @@
 // const sidebar = document.getElementById("sidebar");
 // let open = true;
 // toggleButton.addEventListener("click", ()=>{
-    
+
 //     if(open){
 //         sideBarBox.style.display = "none";
 //         open = false;
@@ -20,7 +20,20 @@
 
 const menu = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
+const menuOptions = document.getElementsByClassName("menu-options");
+const menuElements = Array.from(menuOptions);
+console.log(menuElements);
+
 
 menu.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+});
+
+menuElements.forEach(menuOption => {
+    menuOption.addEventListener("click", () => {
+        setTimeout(() => {
+            navLinks.classList.toggle("active");
+        }, 100);
+
+    })
 });
