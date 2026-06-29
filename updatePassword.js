@@ -37,6 +37,8 @@ updatePasswordForm.addEventListener("submit", (e) => {
                 body: JSON.stringify(passwordUpdateData)
             }
         );
+        console.log(response);
+        
 
         const data = await response.json();
         if (!response.ok) {
