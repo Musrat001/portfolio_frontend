@@ -35,8 +35,7 @@ form.addEventListener("submit", async (e) => {
 
         console.log(data);
         if (data) {
-            // loginCard.style.display = "none";
-            // successMessage.innerText = data.message;
+            localStorage.setItem("accessToken", data.accessToken);
             alert(data.message);
             setTimeout(() => {
                 window.location.href = "index.html";
