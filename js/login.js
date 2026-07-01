@@ -38,9 +38,9 @@ form.addEventListener("submit", async (e) => {
             // loginCard.style.display = "none";
             // successMessage.innerText = data.message;
             alert(data.message);
-            // setTimeout(() => {
-            //     window.location.href = "index.html";
-            // }, 1000);
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1000);
         }
 
     } catch (error) {
