@@ -13,25 +13,26 @@ form.addEventListener("submit", async (e) => {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
         }
+        console.log("About to send login request");
 
         const response = await fetch(
             "https://protfolio-backend-45v7.onrender.com/v1/login",
             {
                 method: "POST",
+                credentials: "include",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                credentials: "include",
                 body: JSON.stringify(loginData)
             }
         );
 
         const data = await response.json();
-        if(!response.ok){
+        if (!response.ok) {
             alert(data.message);
             return;
         }
-        
+
         console.log(data);
         if (data) {
             // loginCard.style.display = "none";
