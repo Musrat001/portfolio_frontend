@@ -19,10 +19,11 @@ form.addEventListener("submit", async (e) => {
             "https://protfolio-backend-45v7.onrender.com/v1/suggestion",
             {
                 method: "POST",
+                credentials: "include",
                 headers: {
                     "Content-Type": "application/json"
                 },
-    
+
                 body: JSON.stringify(userData)
             }
         );
