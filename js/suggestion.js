@@ -13,15 +13,16 @@ form.addEventListener("submit", async (e) => {
             suggestion: document.getElementById("suggestion").value
         }
         console.log(userData);
-
+        const token = localStorage.getItem("accessToken");
 
         const response = await fetch(
             "https://protfolio-backend-45v7.onrender.com/v1/suggestion",
             {
                 method: "POST",
-                credentials: "include",
+                // credentials: "include",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
                 },
 
                 body: JSON.stringify(userData)
