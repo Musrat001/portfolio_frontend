@@ -40,7 +40,7 @@ form.addEventListener("submit", async (e) => {
             alert(data.message);
             setTimeout(() => {
                 window.location.href = "index.html";
-            }, 1000);
+            }, 700);
         }
 
     } catch (error) {
