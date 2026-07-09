@@ -17,7 +17,8 @@
 // })
 
 
-
+const login = document.getElementById("login");
+const logOut = document.getElementById("logOut");
 const menu = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const menuOptions = document.getElementsByClassName("menu-options");
@@ -37,3 +38,15 @@ menuElements.forEach(menuOption => {
 
     })
 });
+
+
+const token = localStorage.getItem("accessToken");
+
+if (token) {
+    logOut.style.display = "Block";
+    login.style.display = "none";
+}
+else {
+    login.style.display = "Block";
+    logOut.style.display = "none";
+}
