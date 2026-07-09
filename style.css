@@ -402,9 +402,10 @@ footer {
 }
 
 
-#logOut {
+#logoutBtn {
     border: none;
-    background-color: var(--accent);;
+    background-color: var(--accent);
+    ;
     color: balck;
     font-size: 15px;
     padding: 8px 12px;
@@ -413,6 +414,6 @@ footer {
 }
 
 
-#logOut:hover{
+#logoutBtn:hover {
     transform: scale(1.08);
 }
