@@ -405,8 +405,7 @@ footer {
 #logoutBtn {
     border: none;
     background-color: var(--accent);
-    ;
-    color: balck;
+    color: black;
     font-size: 15px;
     padding: 8px 12px;
     border-radius: 8px;
