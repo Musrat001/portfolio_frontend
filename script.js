@@ -44,12 +44,14 @@ async function updateNavbar() {
     const logoutBtn = document.getElementById("logoutBtn");
 
     const token = localStorage.getItem("accessToken");
+    // loginBtn.style.display = "block";
+    // logoutBtn.style.display = "none";
 
-    if (!token) {
-        loginBtn.style.display = "block";
-        logoutBtn.style.display = "none";
-        return;
-    }
+    // if (!token) {
+    //     loginBtn.style.display = "block";
+    //     logoutBtn.style.display = "none";
+    //     return;
+    // }
 
     try {
 
