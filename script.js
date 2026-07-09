@@ -17,8 +17,7 @@
 // })
 
 
-const login = document.getElementById("login");
-const logOut = document.getElementById("logOut");
+
 const menu = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const menuOptions = document.getElementsByClassName("menu-options");
@@ -39,14 +38,39 @@ menuElements.forEach(menuOption => {
     })
 });
 
+async function updateNavbar() {
 
-const token = localStorage.getItem("accessToken");
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
 
-if (token) {
-    logOut.style.display = "Block";
-    login.style.display = "none";
+    const token = localStorage.getItem("accessToken");
+
+    if (!token) {
+        loginBtn.style.display = "block";
+        logoutBtn.style.display = "none";
+        return;
+    }
+
+    try {
+
+        const response = await fetch("https://protfolio-backend-45v7.onrender.com/v1/verify-token", {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            loginBtn.style.display = "none";
+            logoutBtn.style.display = "block";
+        } else {
+            localStorage.removeItem("accessToken");
+            loginBtn.style.display = "block";
+            logoutBtn.style.display = "none";
+        }
+
+    } catch (err) {
+        console.log(err);
+    }
 }
-else {
-    login.style.display = "Block";
-    logOut.style.display = "none";
-}
+
+updateNavbar();
