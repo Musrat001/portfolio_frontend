@@ -38,12 +38,14 @@ menuElements.forEach(menuOption => {
     })
 });
 
+const token = localStorage.getItem("accessToken");
+
 async function updateNavbar() {
 
     const loginBtn = document.getElementById("loginBtn");
     const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.style.display = "none"
 
-    const token = localStorage.getItem("accessToken");
     // loginBtn.style.display = "block";
     // logoutBtn.style.display = "none";
 
@@ -64,15 +66,17 @@ async function updateNavbar() {
         if (response.ok) {
             loginBtn.style.display = "none";
             logoutBtn.style.display = "block";
-        } else {
-            localStorage.removeItem("accessToken");
-            loginBtn.style.display = "block";
-            logoutBtn.style.display = "none";
         }
 
     } catch (err) {
         console.log(err);
     }
 }
-
 updateNavbar();
+
+
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("accessToken");
+    loginBtn.style.display = "block";
+    logoutBtn.style.display = "none";
+})
