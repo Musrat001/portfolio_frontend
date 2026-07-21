@@ -17,11 +17,12 @@
 // })
 
 
-
+const chatBotIcon = document.getElementById("chatBotIcon");
 const menu = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 const menuOptions = document.getElementsByClassName("menu-options");
 const menuElements = Array.from(menuOptions);
+const MessageBox = document.getElementById("MessageBox");
 console.log(menuElements);
 
 
@@ -80,3 +81,9 @@ logoutBtn.addEventListener("click", () => {
     loginBtn.style.display = "block";
     logoutBtn.style.display = "none";
 })
+
+const chatBotbox = ()=>{
+
+}
+
+chatBotIcon.addEventListener("click")
