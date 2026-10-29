@@ -12,133 +12,599 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <div class="nav">
+
+  <!-- Navigation Bar -->
+  <nav class="nav">
     <div class="container nav-inner">
 
-      <div class="logo">&lt;/&gt; musrat.jsx</div>
+      <!-- Logo -->
+      <a href="#home" class="logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span>musrat<span class="logo-accent">.jsx</span></span>
+      </a>
 
+      <!-- Mobile Menu Toggle -->
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"
+        aria-controls="nav-links" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <div class="menu-toggle" id="menu-toggle">
-        ☰
-      </div>
-
-      <!-- Navigation -->
+      <!-- Navigation Links -->
       <div class="nav-links" id="nav-links">
-        <a class="menu-options" href="#">Home</a>
+
+        <a class="menu-options" href="#home">Home</a>
+
         <a class="menu-options" href="#about">About</a>
-        <a class="menu-options" href="assets/myResume.pdf" target="_blank">My Resume</a>
-        <a class="menu-options" href="suggestion.html">Suggestion</a>
-        <a class="menu-options" href="login.html" id="loginBtn">Login</a>
-        <button type="button" id="logoutBtn">Log Out</button>
+
+        <a class="menu-options" href="#skills">Skills</a>
+
+        <a class="menu-options" href="#projects">Projects</a>
+
+        <a class="menu-options" href="assets/myResume.pdf" target="_blank" rel="noopener noreferrer">
+          Resume <span class="external-icon">↗</span>
+        </a>
+
+        <a class="menu-options" href="suggestion.html">
+          Suggestion
+        </a>
+
+        <a class="login-btn" href="login.html" id="loginBtn">
+          Login ↗
+        </a>
+
+        <button type="button" id="logoutBtn">
+          Log Out
+        </button>
+
       </div>
 
     </div>
-  </div>
+  </nav>
+
+
 
   <!-- HERO -->
-  <section class="hero">
-    <h1>Hi, I'm <span class="accent">Mohd Musrat</span></h1>
-    <p>Aspiring Developer | Learning DSA & Web</p>
-    <a href="#projects" class="btn">View Projects</a>
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <!-- Developer Badge -->
+      <div class="hero-badge">
+        <span class="hero-status-dot"></span>
+        Computer Engineering Student | Aspiring Developer
+      </div>
+
+      <!-- Main Heading -->
+      <h1>
+        Hi, I'm <span class="hero-name">Mohd Musrat</span>
+        <span class="hero-wave">👋</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <h2 class="hero-subtitle">
+        Building Ideas into <span class="accent">Web Applications</span>
+      </h2>
+
+      <!-- Description -->
+      <p class="hero-description">
+        I'm passionate about software development, the MERN stack,
+        and problem-solving. I enjoy learning new technologies and
+        building projects that turn ideas into practical solutions.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="hero-buttons">
+        <a href="#projects" class="btn hero-btn-primary">
+          Explore My Projects <span>↗</span>
+        </a>
+
+        <a href="#about" class="btn hero-btn-secondary">
+          About Me
+        </a>
+      </div>
+
+      <!-- Technology Highlights -->
+      <div class="hero-tech">
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>MongoDB</span>
+      </div>
+
+    </div>
+
   </section>
 
-  <!-- ABOUT -->
+  <!-- About Section -->
   <section id="about" class="container">
-    <h2 class="title">About Me</h2>
-    <p class="text">
-      I am Student At Jamia Millia Islamia , A central University, New Delhi (110025)<br>and as a
-      computer science student i am passionate about coding, data structures, and building projects. I document my
-      learning journey and aim to become a skilled software developer.
-    </p>
-  </section>
+    <div class="about-card">
 
-  <!-- SKILLS -->
-  <section class="container">
-    <h2 class="title">Skills</h2>
-    <div class="skills">
-      <div class="skill">
+      <div class="about-label">
+        <span class="about-dot"></span>
+        About Me
+      </div>
 
-        <h2>C/C++</h2>
-        <p> I have decent knowledge of C++, and by learning c++,<br>
-          i learn how to manage the memory of computer efficiently </p>
+      <h2 class="about-heading">
+        Hi, I'm <span class="accent">Kamran</span> 👋
+      </h2>
+
+      <p class="about-description">
+        I am a Computer Engineering diploma student at
+        Jamia Millia Islamia, New Delhi, with a passion for
+        software development, problem-solving, and building
+        practical applications.
+      </p>
+
+      <p class="about-description">
+        I enjoy working with JavaScript and the MERN stack to
+        develop web applications, explore backend technologies,
+        and turn ideas into functional projects. I am also
+        strengthening my understanding of data structures and
+        algorithms as I continue my journey toward becoming
+        a skilled software developer.
+      </p>
+
+      <div class="about-highlights">
+        <div class="about-highlight">
+          <span class="highlight-icon">🎓</span>
+          <div>
+            <h3>Education</h3>
+            <p>Jamia Millia Islamia, New Delhi</p>
+          </div>
+        </div>
+
+        <div class="about-highlight">
+          <span class="highlight-icon">💻</span>
+          <div>
+            <h3>Focus</h3>
+            <p>Full-Stack Web Development</p>
+          </div>
+        </div>
+
+        <div class="about-highlight">
+          <span class="highlight-icon">🚀</span>
+          <div>
+            <h3>Mindset</h3>
+            <p>Continuous Learning & Building Projects</p>
+          </div>
+        </div>
       </div>
-      <div class="skill">
-        <h2>Python</h2>
-        <p>This is my programming language<br>
-          that i have learnt and i also learn how can we use various python library<br>
-          to build various project easily </p>
-      </div>
-      <div class="skill">
-        <h2>JavaScript</h2>
-        <p> I have very good knowledge of Javascript<br>
-          i have build various projects in the process of learning this language<br>
-        </p>
-      </div>
-      <div class="skill">
-        <h2>MySQL</h2>
-        <p> I have pretty good knowledge of MySQL , I am still learning this <br>
-          I can perform CRUD operation this language.</p>
-      </div>
-      <div class="skill">
-        <h2>Node.js</h2>
-        <p> I have good knowledge of backend with Node.js.<br>
-          I am still learning this framwork and It's projects are coming soon</p>
-      </div>
+
     </div>
   </section>
+
+
+
+  <!-- SKILLS -->
+
+  <section id="skills" class="container">
+    <h2 class="title">Technical Skills</h2>
+
+    <p class="skills-subtitle">
+      Technologies and tools I use to build applications and solve problems.
+    </p>
+
+    <div class="skills">
+
+      <!-- C/C++ -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">⚙️</span>
+          <span class="skill-category">Programming Language</span>
+        </div>
+
+        <h2>C / C++</h2>
+
+        <p>
+          I have a solid foundation in C and C++, including programming
+          fundamentals, problem-solving, memory management, and
+          understanding how programs work at a lower level.
+        </p>
+
+        <div class="skill-tags">
+          <span>OOP</span>
+          <span>Memory Management</span>
+          <span>Problem Solving</span>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">🐍</span>
+          <span class="skill-category">Programming Language</span>
+        </div>
+
+        <h2>Python</h2>
+
+        <p>
+          I use Python to develop programs and explore different libraries
+          for simplifying tasks, solving problems, and building projects
+          efficiently.
+        </p>
+
+        <div class="skill-tags">
+          <span>Python Basics</span>
+          <span>Libraries</span>
+          <span>Scripting</span>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">⚡</span>
+          <span class="skill-category">Programming Language</span>
+        </div>
+
+        <h2>JavaScript</h2>
+
+        <p>
+          I use JavaScript to build interactive web applications,
+          handle asynchronous operations, work with APIs, and
+          manipulate the DOM.
+        </p>
+
+        <div class="skill-tags">
+          <span>ES6+</span>
+          <span>Async / Await</span>
+          <span>API Integration</span>
+        </div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">🗄️</span>
+          <span class="skill-category">Database</span>
+        </div>
+
+        <h2>MySQL</h2>
+
+        <p>
+          I work with relational databases and SQL queries to
+          perform CRUD operations, retrieve information, and
+          organize structured data efficiently.
+        </p>
+
+        <div class="skill-tags">
+          <span>SQL</span>
+          <span>CRUD Operations</span>
+          <span>Relational Database</span>
+        </div>
+      </div>
+
+      <!-- Node.js -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">🟢</span>
+          <span class="skill-category">Backend Development</span>
+        </div>
+
+        <h2>Node.js</h2>
+
+        <p>
+          I use Node.js to develop backend applications and work
+          with server-side JavaScript. I am expanding my knowledge
+          of backend development and building full-stack projects.
+        </p>
+
+        <div class="skill-tags">
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>REST APIs</span>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">⚛️</span>
+          <span class="skill-category">Frontend Development</span>
+        </div>
+
+        <h2>React.js</h2>
+
+        <p>
+          I use React to build component-based user interfaces,
+          manage application state, handle events, and create
+          interactive web applications.
+        </p>
+
+        <div class="skill-tags">
+          <span>Components</span>
+          <span>Hooks</span>
+          <span>State Management</span>
+        </div>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">🍃</span>
+          <span class="skill-category">Database</span>
+        </div>
+
+        <h2>MongoDB</h2>
+
+        <p>
+          I use MongoDB to store and manage application data
+          in a document-oriented database and integrate it
+          with backend applications using Mongoose.
+        </p>
+
+        <div class="skill-tags">
+          <span>NoSQL</span>
+          <span>Mongoose</span>
+          <span>Data Modeling</span>
+        </div>
+      </div>
+
+      <!-- HTML & CSS -->
+      <div class="skill">
+        <div class="skill-header">
+          <span class="skill-icon">🎨</span>
+          <span class="skill-category">Frontend Development</span>
+        </div>
+
+        <h2>HTML & CSS</h2>
+
+        <p>
+          I use HTML and CSS to structure web pages and create
+          responsive layouts, styled components, and modern
+          user interfaces.
+        </p>
+
+        <div class="skill-tags">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>Responsive Design</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
 
   <!-- PROJECTS -->
   <section id="projects" class="container">
     <h2 class="title">Projects</h2>
+    <section class="projects-section" id="projects">
+      <div class="project-card">
+
+        <div class="project-header">
+          <span class="project-icon">💬</span>
+          <span class="project-status">Full Stack Project</span>
+        </div>
+
+        <h2>Real-Time Chat Application</h2>
+
+        <p class="project-description">
+          A full-stack real-time messaging application built using the
+          MERN stack that enables users to communicate through instant
+          one-to-one messaging, view conversation history, and share images.
+        </p>
+
+        <h3>Key Features</h3>
+
+        <ul class="project-features">
+          <li>Secure user authentication using JWT and bcrypt</li>
+          <li>Instant messaging with Socket.IO</li>
+          <li>Private one-to-one conversations</li>
+          <li>Persistent message history using MongoDB</li>
+          <li>Image sharing with Cloudinary</li>
+          <li>Responsive interface built with React and Tailwind CSS</li>
+        </ul>
+
+        <h3>Technologies Used</h3>
+
+        <div class="tech-stack">
+          <span>React.js</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>MongoDB</span>
+          <span>Socket.IO</span>
+          <span>Tailwind CSS</span>
+          <span>JWT</span>
+          <span>Cloudinary</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://fronend-of-chat-app.vercel.app" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">
+            Live Demo ↗
+          </a>
+
+          <a href="https://github.com/Musrat001/FronendOfChatApp" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
+            GitHub ↗
+          </a>
+          <a href="https://github.com/Musrat001/BackendOfChatApp" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
     <div class="projects">
+
+      <!-- Calculator Project -->
       <div class="card">
-        <h3>
-          Calculator
-        </h3>
-        <p>I have created a calculator using pure html css and javascript <br>
-          by building this mini project got to know how to handle numeric calculation.</p>
-        <a href="https://musrat001.github.io/mini-projects-of-js/js%20practice/11_eleven.html">View Project
-          →</a>
+        <div class="project-header">
+          <span class="project-icon">🧮</span>
+          <span class="project-status">Mini Project</span>
+        </div>
+
+        <h3>Calculator</h3>
+
+        <p>
+          A simple calculator built using HTML, CSS, and JavaScript
+          to perform numeric calculations. This project helped me
+          understand JavaScript event handling, DOM manipulation,
+          and basic mathematical operations.
+        </p>
+
+        <h4>Technologies Used</h4>
+
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://musrat001.github.io/mini-projects-of-js/js%20practice/11_eleven.html" target="_blank"
+            rel="noopener noreferrer" class="btn btn-primary">
+            Live Demo ↗
+          </a>
+
+          <a href="https://github.com/musrat001/mini-projects-of-js" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
       </div>
 
+
+      <!-- Weather App Project -->
       <div class="card">
+        <div class="project-header">
+          <span class="project-icon">🌦️</span>
+          <span class="project-status">API Integration</span>
+        </div>
+
         <h3>Weather App</h3>
-        <p>In the building process of this mini project i learnt <br>
-          how to use API from other sources, what is key in terms od API.<br>
-          And also leart how to use then to showcase only the relevent data rather than show randon stuff.
+
+        <p>
+          A weather application that fetches real-time weather
+          information from an external API and displays relevant
+          weather data. This project helped me understand API
+          integration, asynchronous JavaScript, and dynamic
+          data rendering.
         </p>
-        <a href="https://musrat001.github.io/weatherApp/weatherApp/weatherApp.html">View Project →</a>
+
+        <h4>Technologies Used</h4>
+
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Weather API</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://musrat001.github.io/weatherApp/weatherApp/weatherApp.html" target="_blank"
+            rel="noopener noreferrer" class="btn btn-primary">
+            Live Demo ↗
+          </a>
+
+          <a href="https://github.com/musrat001/weatherApp" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Digital Clock</h3>
-        <p>In the building process of this mini project i learnt <br>
-          How to use Inbuilt javascript time function to create a digital clock<br>
-          And also leart how to use then to showcase only the relevent data rather than show randon stuff.
-        </p>
-        <a href="https://musrat001.github.io/mini-projects-of-js/js%20practice/09_nine.html">View Project →</a>
-      </div>
+
     </div>
+
+
+
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h2 class="title">Contact</h2>
-    <p class="text">Email at : mohdmusrat733@gmail.com</p>
-    <p class="text">Phone No / WhatApp : 9839795112</p>
-    <p class="text">Instagram:
-      <a href="#"> musrat.jsx</a>
-    </p>
-    <p class="text">Follow on:
-      <a href="https://www.linkedin.com/feed/">LinkedIn</a>
-    </p>
-    <p class="text">Check Out my :
-      <a href="https://github.com/">GitHub </a>
-    </p>
-    <p class="text">Follow my Instagram page :
-      <a href="https://www.instagram.com/eggandcode?igsh=MXhtcHF2bWExcnAxeA==" target="_blank">My Insta page</a>
-    </p>
+  
+  <section id="contact" class="contact container">
+
+    <div class="contact-header">
+      <span class="contact-badge">📬 Get In Touch</span>
+
+      <h2 class="title">
+        Let's <span class="contact-accent">Connect</span>
+      </h2>
+
+      <p class="contact-description">
+        Have a project idea, an opportunity, or just want to connect?
+        Feel free to reach out. I'd love to hear from you!
+      </p>
+    </div>
+
+    <div id="contact-options" class="contact-grid">
+
+      <!-- Email -->
+      <a href="mailto:mohdmusrat733@gmail.com" class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <h3>Email</h3>
+          <p>mohdmusrat733@gmail.com</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/919839795112" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon">💬</div>
+        <div class="contact-info">
+          <h3>WhatsApp</h3>
+          <p>Let's have a conversation</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon">💼</div>
+        <div class="contact-info">
+          <h3>LinkedIn</h3>
+          <p>Connect with me professionally</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon">💻</div>
+        <div class="contact-info">
+          <h3>GitHub</h3>
+          <p>Explore my projects and code</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <!-- Instagram Profile -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="contact-card">
+        <div class="contact-icon">📸</div>
+        <div class="contact-info">
+          <h3>Instagram</h3>
+          <p>@musrat.jsx</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+      <!-- Instagram Page -->
+      <a href="https://www.instagram.com/eggandcode?igsh=MXhtcHF2bWExcnAxeA==" target="_blank" rel="noopener noreferrer"
+        class="contact-card">
+        <div class="contact-icon">🚀</div>
+        <div class="contact-info">
+          <h3>EggAndCode</h3>
+          <p>Follow my coding journey</p>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+
+    </div>
+
+    <div class="contact-footer">
+      <p>I'm always open to learning, collaborating, and building something new.</p>
+    </div>
+
   </section>
+  
+
 
   <!-- <section id="chatBotContainer">
     <div id="chatBotIcon">
