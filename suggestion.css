@@ -1,9 +1,10 @@
 :root {
-    --bg: #0D1117;
-    --card: #161B22;
-    --text: #ffffff;
-    --muted: #8B949E;
-    --accent: #A6FF4D;
+    --bg: #080B12;
+    --card: #111827;
+    --text: #F1F5F9;
+    --muted: #9CA3AF;
+    --accent: #8B5CF6;
+    --accent-soft: rgba(139, 92, 246, 0.16);
 }
 
 body {
