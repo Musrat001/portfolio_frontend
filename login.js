@@ -30,32 +30,15 @@ form.addEventListener("submit", async (e) => {
 
         const data = await response.json();
         if (response.ok) {
-            Toastify({
-                text: data.message || "Login successful!",
-                duration: 3000,
-                style: {
-                    background: "#16a34a"
-                }
-            }).showToast();
-        }else{
-            Toastify({
-                text: data.message || "Login Failed!",
-                duration: 3000,
-                style: {
-                    background: "#a31616"
-                }
-            }).showToast();
-            return;
+
+            showSuccess(data.message || "Login successful!");
+
+        } else {
+
+            showError(data.message || "Login failed!");
+
         }
 
-        console.log(data);
-        if (data) {
-            localStorage.setItem("accessToken", data.accessToken);
-            alert(data.message);
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 700);
-        }
 
     } catch (error) {
         console.log("Error While loging in..", error);

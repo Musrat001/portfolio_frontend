@@ -26,38 +26,34 @@ const MessageBox = document.getElementById("MessageBox");
 console.log(menuElements);
 
 // Success notification
-function showSuccess() {
+function showSuccess(message) {
 
     Toastify({
-        text: "Login successful!",
+        text: message,
         duration: 3000,
-        close: true,
         gravity: "top",
         position: "right",
-
+        close: true,
         style: {
-            background: "#16a34a",
+            background: "#16a34a"
         }
-
     }).showToast();
 
 }
 
 
 // Error notification
-function showError() {
+function showError(message) {
 
     Toastify({
-        text: "Something went wrong!",
+        text: message,
         duration: 3000,
-        close: true,
         gravity: "top",
         position: "right",
-
+        close: true,
         style: {
-            background: "#dc2626",
+            background: "#dc2626"
         }
-
     }).showToast();
 
 }
