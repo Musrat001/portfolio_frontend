@@ -29,8 +29,22 @@ form.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
-        if (!response.ok) {
-            alert(data.message);
+        if (response.ok) {
+            Toastify({
+                text: data.message || "Login successful!",
+                duration: 3000,
+                style: {
+                    background: "#16a34a"
+                }
+            }).showToast();
+        }else{
+            Toastify({
+                text: data.message || "Login Failed!",
+                duration: 3000,
+                style: {
+                    background: "#a31616"
+                }
+            }).showToast();
             return;
         }
 

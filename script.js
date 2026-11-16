@@ -25,6 +25,61 @@ const menuElements = Array.from(menuOptions);
 const MessageBox = document.getElementById("MessageBox");
 console.log(menuElements);
 
+// Success notification
+function showSuccess() {
+
+    Toastify({
+        text: "Login successful!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+
+        style: {
+            background: "#16a34a",
+        }
+
+    }).showToast();
+
+}
+
+
+// Error notification
+function showError() {
+
+    Toastify({
+        text: "Something went wrong!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+
+        style: {
+            background: "#dc2626",
+        }
+
+    }).showToast();
+
+}
+
+
+// Warning notification
+function showWarning() {
+
+    Toastify({
+        text: "Please fill all required fields!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+
+        style: {
+            background: "#d97706",
+        }
+
+    }).showToast();
+
+}
 
 menu.addEventListener("click", () => {
     navLinks.classList.toggle("active");
@@ -82,7 +137,7 @@ logoutBtn.addEventListener("click", () => {
     logoutBtn.style.display = "none";
 })
 
-const chatBotbox = ()=>{
+const chatBotbox = () => {
 
 }
 
